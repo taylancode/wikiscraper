@@ -10,3 +10,4 @@ downloads/
 eggs/
 .venv
 venv
+.coverage
