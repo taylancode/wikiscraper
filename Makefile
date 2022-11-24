@@ -7,7 +7,7 @@ format:
 lint:
 	pylint --disable=R,C *.py lib/*.py
 test:
-	python -m pytest -vv --cov=lib test_logic.py
+	python -m pytest -vv --cov-append --cov=lib tests/
 build:
 	#build container
 deploy:
