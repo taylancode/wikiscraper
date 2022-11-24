@@ -1,6 +1,6 @@
 import uvicorn
 from fastapi import FastAPI
-from lib.logic import wiki, wiki_search
+from lib.logic import wiki, wiki_search, wiki_phrase
 
 
 app = FastAPI()
@@ -19,6 +19,11 @@ async def search(name: str) -> str:
 @app.get("/wiki/{name}")
 async def page(name: str) -> str:
     return {"result": wiki(name)}
+
+
+@app.get("/phrase/{name}")
+async def phrase(name: str) -> str:
+    return {"result": wiki_phrase(name)}
 
 
 if __name__ == "__main__":
