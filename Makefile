@@ -5,7 +5,7 @@ install:
 format:
 	black *.py lib/*.py
 lint:
-
+	pylint --disable=R,C *.py lib/*.py
 test:
 
 deploy:
