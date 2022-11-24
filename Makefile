@@ -7,9 +7,9 @@ format:
 lint:
 	pylint --disable=R,C *.py lib/*.py
 test:
-	python -m pytest -vv --cov-append --cov=lib tests/
+	python -m pytest -vv --cov-append --cov=lib --cov=main tests/
 build:
-	#build container
+	docker build -t deploy-fastapi
 deploy:
 
 all:
