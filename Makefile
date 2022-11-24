@@ -10,7 +10,9 @@ lint:
 test:
 	python -m pytest -vv --cov-append --cov=lib --cov=main tests/
 build:
-	docker build -t deploy-fastapi
+	docker build -t deploy-wikiscraper .
+run:
+	docker run -p 127.0.0.1:8080:8080 b9526d20c720
 deploy:
 
 all:
