@@ -3,3 +3,6 @@ from lib.logic import wiki
 
 def test_wiki():
     assert "god" in wiki()
+
+def test_wiki2():
+    pass
